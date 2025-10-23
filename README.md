@@ -1,5 +1,7 @@
 **Haskell Learning Lab** 🐍✨
 
+<img width="214" height="187" alt="startingout" src="https://github.com/user-attachments/assets/dfe5238e-12b6-484f-8fb3-2dc292c6e192" />
+
 
 Тази лаборатория документира ранните стъпки на обучение по Haskell на един младеж. Основният учебник, който използваме, е Learn You a Haskell for Great Good!
 .
