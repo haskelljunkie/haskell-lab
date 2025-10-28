@@ -42,3 +42,10 @@ take' n _
     | n <= 0 = []
 take' _ [] = []
 take' n (x:xs) = x : take' (n-1) xs
+
+
+
+sumUp :: (Num t, Eq t) => t -> t
+sumUp 0 = 0 
+sumUp n = n + sumUp (n-1)
+
