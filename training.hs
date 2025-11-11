@@ -54,3 +54,12 @@ initials (x:_) (y:_) = [x] ++". " ++ [y] ++"."
 -- за да превърнеш Char в String, можеш да използваш [x], т.е. списък от един символ.
 
 --TODO: task number 8,9 and 10 
+
+--makegreeting tacit programming with eta reduction
+
+makeGreeting :: String -> String -> String
+makeGreeting = (<>).(<> " ")
+
+--makeGreeting'' with lanmbda
+makeGreeting' :: String -> String -> String
+makeGreeting' = \x -> \y-> (x <> " " <> y)
