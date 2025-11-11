@@ -63,3 +63,18 @@ makeGreeting = (<>).(<> " ")
 --makeGreeting'' with lanmbda
 makeGreeting' :: String -> String -> String
 makeGreeting' = \x -> \y-> (x <> " " <> y)
+
+
+
+{-Напиши функция tripleMagicPlus:
+Взима число x
+Удвоява го
+Добавя 1
+После умножава резултата по 3
+Цел: Направи я първо pointful, после pointfree.-}
+
+tripleMagicPlus :: (Num a) => a -> a
+tripleMagicPlus = \x -> (x*2 +1) * 3
+
+tripleMagicPlus' :: (Num a ) => a -> a
+tripleMagicPlus' = (*3).(+1).(*2)
