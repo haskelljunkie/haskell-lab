@@ -22,6 +22,23 @@ squares' (x:xs) = (x^2) : squares' xs
 plusTen :: Num a => [a] -> [a]
 plusTen = map (+10)
 
+-- Използвай filter, за да извадиш само четните числа от [1..20].
+
+evenFilter :: [Integer]
+evenFilter = filter (even) [1..20]
+
+-- TODO: Напиши функция endsWithS :: [String] -> [String], която връща само думите, завършващи на 's'.
+
+--endsWithS :: [String] ->[String]
+--endsWithS :: [Char] -> Bool
+endsWithS :: [String] -> Bool
+endsWithS = (\word -> last word == "s")
+
+
+
+
+
+
 --TODO:Направи функция, която взима само четните числа от списък
 
 --takeEven :: Num a => [a] -> [a]
