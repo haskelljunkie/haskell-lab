@@ -27,12 +27,10 @@ plusTen = map (+10)
 evenFilter :: [Integer]
 evenFilter = filter (even) [1..20]
 
--- TODO: Напиши функция endsWithS :: [String] -> [String], която връща само думите, завършващи на 's'.
+-- Напиши функция endsWithS :: [String] -> [String], която връща само думите, завършващи на 's'.
 
---endsWithS :: [String] ->[String]
---endsWithS :: [Char] -> Bool
-endsWithS :: [String] -> Bool
-endsWithS xs = (\word -> last word == "s") xs
+endsWithS :: [String] ->[String]
+endsWithS = filter (\word -> last word == 's')
 
 
 
