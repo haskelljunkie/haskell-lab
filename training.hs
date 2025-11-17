@@ -33,6 +33,7 @@ myAbs a
     | a < 0 = -a
     | otherwise = a
 
+
 describe :: Int -> String
 
 describe n 
@@ -78,3 +79,53 @@ tripleMagicPlus = \x -> (x*2 +1) * 3
 
 tripleMagicPlus' :: (Num a ) => a -> a
 tripleMagicPlus' = (*3).(+1).(*2)
+
+{-Напиши функция lastDigit :: Int -> Int
+която връща последната цифра на дадено число.
+Пример:
+lastDigit 789 = 9-}
+
+lastDigit :: Int -> Int 
+
+lastDigit n =  n `mod` 10
+
+{-Малка рекурсия
+Напиши функция countDown :: Int -> [Int]
+която приема число и връща списък, който брои надолу до 0.
+Пример:
+countDown 5 = [5,4,3,2,1,0]-}
+
+countDown :: Int -> [Int]
+
+countDown 0 = []
+countDown n =  n : countDown (n-1)
+
+
+
+{-Задача 3 — Map тренировка
+Напиши функция doubleAll :: [Int] -> [Int]
+която удвоява всички елементи в списъка, без рекурсия.
+Използвай map.-}
+
+doubleAll :: [Int] -> [Int]
+doubleAll  = map (*2)  
+{-Задача 4 — Филтриране
+Напиши функция onlyLong :: [String] -> [String]
+която оставя само думите по-дълги от 5 символа.-}
+
+onlyLong :: [String] -> [String]
+onlyLong  = filter (\s ->  length s > 5 ) 
+
+{-Задача 5 — Рекурсивно списъчно смятане
+Напиши myLength :: [a] -> Int
+която връща дължината на списък без да ползваш length.-}
+
+myLength :: [a] -> Int
+myLength [] = 0 
+myLength (_:xs) = 1 +  myLength xs
+
+
+
+{-Задача 6 — Малка логика
+Напиши функция alternatingSum :: [Int] -> Int
+която събира елементите на списъка, като ту един добавяш, ту един изваждаш.-}
