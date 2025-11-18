@@ -40,3 +40,32 @@ countOdds [] = 0
 countOdds (x:xs) = 
    if odd x then 1  + countOdds xs 
    else countOdds xs 
+
+{-Задача 2 — Броене на главни букви (Char)
+countUpper :: String -> Int
+Връща броя на главните букви в стринг чисто рекурсивно, без filter, без map.
+Полезна функция:
+isUpper :: Char -> Bool
+Пример:
+countUpper "HeLLo"  -- 3
+-}
+countUpper :: String -> Int 
+countUpper [] = 0
+countUpper (a:bc)= 
+   if a`elem` ['A'..'Z'] then 1 + countUpper bc
+   else countUpper bc 
+
+   {-Задача 3 — allTrue Напиши функция:
+ allTrue :: [Bool] -> Bool която: връща True само ако всички елементи в списъка са 
+ True иначе → False и използва само pattern matching + рекурсия. Пример:
+allTrue [True, True, False]  -- False
+allTrue []                   -- True-}
+
+allTrue :: [Bool] -> Bool 
+allTrue [] = True 
+allTrue (x:xs) =
+   if x == False then False 
+   else allTrue xs 
+
+
+ 
