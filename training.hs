@@ -129,3 +129,34 @@ myLength (_:xs) = 1 +  myLength xs
 {-Задача 6 — Малка логика
 Напиши функция alternatingSum :: [Int] -> Int
 която събира елементите на списъка, като ту един добавяш, ту един изваждаш.-}
+alternatingSum :: [Int] -> Int
+alternatingSum [] = 0 
+alternatingSum[x] = x
+alternatingSum (x:y:xs) = x - y + alternatingSum xs 
+
+--Задача 1 — Напиши функция, която връща броя на двойките (even numbers) в списък.
+
+countEvens :: [Int] -> Int
+countEvens [] = 0
+countEvens (x:xs) = if even x  then 1 +  countEvens xs else countEvens xs
+
+--Задача 2 — Напиши функция, която връща списъка в обратен ред.
+reverseList :: [a] -> [a]
+reverseList [] = []
+reverseList (x:xs) =  reverseList xs ++ [x]
+
+{-Задача 3 — Проверка дали дадено число е в списъка
+Име:
+contains :: Eq a => a -> [a] -> Bool
+Пример:
+contains 5 [1,4,5,7] = True
+contains 9 [1,4,5,7] = False
+
+Условие:
+само рекурсия
+чист if или pattern matching-}
+
+contains :: Eq a => a -> [a] -> Bool
+contains _ [] = False 
+contains n (x:xs) = if n == x then True  else contains n xs 
+    
