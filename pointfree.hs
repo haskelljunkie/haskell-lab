@@ -20,3 +20,14 @@ numLists''  = map succ
 squareEven  = map(^2) . filter even  
 
 squareEven'  = map(\x -> x^2) . filter even
+
+{-Задача 3:Направи функция cubeOdd, която: Взима списък от цели числа.Взима само нечетните числа (filter odd).
+Връща нов списък, в който тези числа са на куб (map (^3)).
+Първо я напиши с lambda, после можем да я превърнем в pointfree стил.
+Искаш ли да опиташ веднага?-}
+
+cubeOdd :: [Int] -> [Int]
+cubeOdd xs = map(\x -> x^3) (filter odd xs)
+
+cubeOdd' :: [Int] -> [Int]
+cubeOdd'  = map(^3) . filter odd 
