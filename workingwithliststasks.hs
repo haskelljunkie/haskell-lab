@@ -2,14 +2,28 @@
 
 -- 1. Вземи първия елемент на списъка [3,5,7,9]
 
+firstHead :: [a] -> a
+firstHead xs = head xs
+
+firstHead' :: [a] -> a
+firstHead'  = \xs -> head xs -- with lambda
+
+firstHead'' :: [a] -> a
+firstHead'' = head         -- мълчаливо програмиране 
+
+
 
 -- 2. Вземи всички елементи, освен първия, на [3,5,7,9]
-
+lastElem :: [a] -> [a]
+lastElem  =  tail  
 
 -- 3. Вземи последния елемент на [3,5,7,9]
 
+concElem :: Integer
+concElem = last [3,5,7,9]
 
 -- 4. Вземи всички елементи, освен последния, на [3,5,7,9]
+
 
 
 -- 5. Обърни списъка [1,2,3,4,5]
