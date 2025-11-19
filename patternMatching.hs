@@ -1,3 +1,4 @@
+
 lucky :: Int -> String
 lucky 7 = "Tha's the lucky number"
 lucky x = "Wrong!"
@@ -61,3 +62,13 @@ countInRange a  b
 Използвай само сравнения и логика.-}
 isInRange :: Int -> Int -> Int -> Bool
 isInRange x a b =  x >= a && x <= b 
+
+{-6. Малко по-шеговита:
+Функция safeHead :: [a] -> String, която:
+– ако списъкът е празен → връща "Нищо няма тука."
+– ако не е → връща "Първият елемент е тук!"
+(не се интересуваме какъв е, просто искаме текст)-}
+
+safeHead :: [a] -> String 
+safeHead [] = "Nothing here!"
+safeHead (_:_) = "First element is here!"
