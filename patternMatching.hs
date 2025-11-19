@@ -56,6 +56,8 @@ countInRange :: Int -> Int -> Int
 countInRange a  b
     | a > b = 0
     | otherwise = 1 + countInRange ( a +1 ) b
---todo
-
-   
+{-5. Функция isInRange :: Int -> Int -> Int -> Bool
+Проверява дали дадено число x е в интервала [a..b].
+Използвай само сравнения и логика.-}
+isInRange :: Int -> Int -> Int -> Bool
+isInRange x a b =  x >= a && x <= b 
