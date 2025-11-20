@@ -52,23 +52,38 @@ dropElem = drop 2
 -- Група 3: Агрегиращи функции
 
 -- 10. Най-голямото число в списъка [5,3,8,2,9]
-
+takeMax :: [Int] -> Int
+takeMax = maximum 
 
 -- 11. Най-малкото число в списъка [5,3,8,2,9]
+takeMin :: [Int] -> Int 
+takeMin = minimum
 
 
 -- 12. Сумата на числата в списъка [1,2,3,4,5]
-
+sumList :: [Int] -> Int 
+sumList = sum
 
 -- 13. Произведението на числата в списъка [1,2,3,4,5]
+
+productList :: [Int] -> Int
+productList = product
 
 -- Група 4: Проверки и повтаряне
 
 -- 14. Провери дали 3 е елемент на списъка [1,2,3,4]
 
+checkElem :: Bool
+checkElem = (elem) 3 [1,2,3,4]
+
 
 -- 15. Направи безкраен цикъл от [1,2,3]
 
+endless :: [Integer]
+endless = cycle [1,2,3]
 
 -- 16. Направи списък с 5 повторения на 7
 
+
+listFiveSeven :: [Integer]
+listFiveSeven  = replicate 5 7
