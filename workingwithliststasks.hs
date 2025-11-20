@@ -1,9 +1,10 @@
+
 -- Група 1: Основни операции с елементи
 
 -- 1. Вземи първия елемент на списъка [3,5,7,9]
 
 firstHead :: [a] -> a
-firstHead xs = head xs
+firstHead = head
 
 firstHead' :: [a] -> a
 firstHead'  = \xs -> head xs -- with lambda
@@ -14,26 +15,30 @@ firstHead'' = head         -- мълчаливо програмиране
 
 
 -- 2. Вземи всички елементи, освен първия, на [3,5,7,9]
-lastElem :: [a] -> [a]
-lastElem  =  tail  
+tailCheck :: [a] -> [a]
+tailCheck  =  tail
 
 -- 3. Вземи последния елемент на [3,5,7,9]
 
-concElem :: Integer
-concElem = last [3,5,7,9]
+concElem :: [Integer] -> Integer
+concElem = last
 
 -- 4. Вземи всички елементи, освен последния, на [3,5,7,9]
-
+initElem :: [Int] -> [Int]
+initElem = init
 
 
 -- 5. Обърни списъка [1,2,3,4,5]
-
+myReverse :: [Int] -> [Int]
+myReverse = reverse
 
 -- 6. Провери дали списъкът [] е празен
-
-
+listCheck :: [a] -> Bool
+listCheck  = null 
+    
 -- 7. Вземи дължината на списъка [1,2,3,4,5]
-
+listLength :: [a] -> Int 
+listLength = length
 
 -- Група 2: Части от списък
 
