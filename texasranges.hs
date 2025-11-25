@@ -54,7 +54,23 @@ veryFilter :: [Int]
 veryFilter = filter (\x -> x `mod` 3 == 1) [1..20]
 {-- 17. Направи списък от 1 до 30 и използвай take и drop, за да вземеш числата от 10 до 20 --}
 
+soecialTake :: [Integer]
+soecialTake = take 10 [1..30] ++ take 11 (drop 9 [1..30])  
 {-- 18. Създай безкраен списък от 5,6,7,… и вземи първите 15 числа --}
+infinList :: [Integer]
+infinList = take 15 (cycle [5,6,7])
 {-- 19. Направи списък от 1 до 50 и раздели на два списъка – четни и нечетни числа --}
+
+
+customListeven :: [Int]
+customListeven  =  [x | x <- [1..50], even x] 
+customListodd :: [Int]
+customListodd  =  [y | y <- [1..50], odd y] 
+
+total :: [Char]
+total = show customListeven ++" " ++ show customListodd
 {-- 20. Създай списък от 1 до 100 и намери сумата на числата, кратни на 4 или 6 --}
---ok
+
+customSumTo4 :: Integer
+customSumTo4 = sum [x |x <-  [1..100], x `mod` 4 == 0 || x `mod` 6 == 0]
+
