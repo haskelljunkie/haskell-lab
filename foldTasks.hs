@@ -51,3 +51,7 @@ intToString = foldr (\x acc -> show x ++ acc) ""
 -- 12. Направи myFilter с foldr
 myFilter :: (a -> Bool) -> [a] -> [a]
 myFilter p = foldr (\x acc -> if p x then x : acc else acc) []
+
+
+sumList :: (Num a) => [a] -> a
+sumList = sum
