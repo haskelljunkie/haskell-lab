@@ -54,19 +54,21 @@ seconds  = map snd
 
 -- 14. Вземи три triple-а и върни tuple от първите им елементи
 tripleFirsts :: ((a,b,c), (a,b,c), (a,b,c)) -> (a,a,a)
-tripleFirsts = --TODO
+tripleFirsts ((x,_,_), (y,_,_), (z,_,_)) = (x, y, z)
 
 -- 15. Функция, която повдига квадрат всяко число в tuple (x,y)
---squarePair :: Num a => (a, a) -> (a, a)
---squarePair = undefined
+squarePair :: Num a => (a, a) -> (a, a)
+squarePair(x,y) = (x^2,y^2 )
 
 -- 16. Приеми списък от (име, възраст) и върни имената на пълнолетните
 adults :: [(String, Int)] -> [String]
-adults = undefined
+adults xs = [ name | (name, age) <- xs, age >= 18 ]
+
 
 -- 17. Приеми списък от числа и върни (n, n^2) за всяко n
 numberSquares :: Num a => [a] -> [(a, a)]
-numberSquares = undefined
+numberSquares  = map (\x-> (x,x^2) ) 
+
 
 -- 18. Раздели списък от Int на (четни, нечетни)
 splitEvenOdd :: Integral a => [a] -> ([a], [a])
