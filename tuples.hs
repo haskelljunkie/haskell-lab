@@ -72,7 +72,11 @@ numberSquares  = map (\x-> (x,x^2) )
 
 -- 18. Раздели списък от Int на (четни, нечетни)
 splitEvenOdd :: Integral a => [a] -> ([a], [a])
-splitEvenOdd = undefined
+splitEvenOdd = foldr (\x (evs, ods) ->
+                        if even x
+                        then (x:evs, ods)
+                        else (evs, x:ods))
+                     ([], [])
 
 -- 19. Напиши собствена версия на zip
 myZip :: [a] -> [b] -> [(a, b)]
